@@ -21,6 +21,7 @@ def get_db_connection():
         )
         return conn
     except OperationalError as e:
+        print(f"ERROR: DB connection failed! Details: {e}")
         return None  # Không crash nếu DB fail
 
 # Init table và insert sample data nếu chưa có
